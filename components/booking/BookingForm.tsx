@@ -10,12 +10,13 @@ export default function BookingForm () {
         cardNumber: "",
         expirationDate: "",
         cvv: "",
-        billingAddress: "",
-        streetAddress: "",
-        city: "",
-        state: "",
-        zipCode: "",
-        country: "",
+        billingAddress: {
+            streetAddress: "",
+            city: "",
+            state: "",
+            zipCode: "",
+            country: ""
+        },
     });
     const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { name, value } = e.target;
@@ -95,27 +96,27 @@ export default function BookingForm () {
         <h2 className="text-[17px] font-bold mt-6">Billing Address</h2>
         <div className="mt-4 text-[#747474] font-medium">
         <label>Street Address</label>
-        <input type="text" className="border rounded-lg p-2 w-full mt-2 border-gray-200" value={formData.streetAddress} onChange={handleChange} />
+        <input type="text" className="border rounded-lg p-2 w-full mt-2 border-gray-200" value={formData.billingAddress.streetAddress} onChange={handleChange} />
         </div>
         <div className="mt-4">
         <div className="text-[#747474] font-medium">
             <label>City</label>
-            <input type="text" className="border rounded-lg p-2 w-full mt-2 border-gray-200" value={formData.city} onChange={handleChange} />
+            <input type="text" className="border rounded-lg p-2 w-full mt-2 border-gray-200" value={formData.billingAddress.city} onChange={handleChange} />
         </div>
         <div className="grid grid-cols-2 gap-4 mt-2">
         <div className="text-[#747474] font-medium">
             <label>State</label>
-            <input type="text" className="border rounded-lg p-2 w-full mt-2 border-gray-200" value={formData.state} onChange={handleChange} />
+            <input type="text" className="border rounded-lg p-2 w-full mt-2 border-gray-200" value={formData.billingAddress.state} onChange={handleChange} />
         </div>
         <div className="text-[#747474] font-medium">
             <label>Zip Code</label>
-            <input type="text" className="border rounded-lg p-2 w-full mt-2 border-gray-200" value={formData.zipCode} onChange={handleChange} />
+            <input type="text" className="border rounded-lg p-2 w-full mt-2 border-gray-200" value={formData.billingAddress.zipCode} onChange={handleChange} />
         </div>
         </div>
         </div>
         <div>
             <label className="text-[#747474] font-medium">Country</label>
-            <input type="text" className="border rounded-lg p-2 w-full mt-2 border-gray-200" value={formData.country} onChange={handleChange} />
+            <input type="text" className="border rounded-lg p-2 w-full mt-2 border-gray-200" value={formData.billingAddress.country} onChange={handleChange} />
         </div>
 
         <div className="mt-8">
