@@ -1,5 +1,5 @@
 import { NextApiRequest, NextApiResponse } from 'next';
-import { PROPERTYLISTINGSAMPLE } from '@/constants/index'; // Import the main data
+import { PROPERTYLISTINGSAMPLE } from '@/constants/index'; 
 import { Reviews } from '@/interfaces'; 
 
 export default function handler(
