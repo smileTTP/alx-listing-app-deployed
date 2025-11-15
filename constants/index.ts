@@ -23,6 +23,7 @@ export const CATEGORIES: CategoryProps[] = [
 
 export const PROPERTYLISTINGSAMPLE: PropertyProps [] = [
   {
+    id: 1,
     name: "Villa Arrecife Beach House",
     address: {
       state: "Sidemen",
@@ -77,6 +78,7 @@ export const PROPERTYLISTINGSAMPLE: PropertyProps [] = [
     ]
   },
   {
+    id: 2,
     name: "Entire cabin",
     address: {
       state: "Nova",
@@ -106,6 +108,7 @@ export const PROPERTYLISTINGSAMPLE: PropertyProps [] = [
     ]
   },
   {
+    id: 3,
     name: "Earthen home",
     address: {
       state: "",
@@ -135,6 +138,7 @@ export const PROPERTYLISTINGSAMPLE: PropertyProps [] = [
     ]
   },
   {
+    id: 4,
     name: "Private room",
     address: {
       state: "",
@@ -164,6 +168,7 @@ export const PROPERTYLISTINGSAMPLE: PropertyProps [] = [
     ]
   },
   {
+    id: 4,
     name: "Gokce Gemile Estate",
     address: {
       state: "",
@@ -193,6 +198,7 @@ export const PROPERTYLISTINGSAMPLE: PropertyProps [] = [
     ]
   },
   {
+    id: 5,
     name: "Luxury 1000 sqm Villa...",
     address: {
       state: "",
