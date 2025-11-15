@@ -1,8 +1,10 @@
+import { BookingDetails } from "@/interfaces";
 import axios from "axios";
 import { useState } from "react";
+import Modal from "../common/Modal";
 
 export default function BookingForm () {
-    const [formData, setFormData] = useState({
+    const [formData, setFormData] = useState<BookingDetails>({
         firstName: "",
         lastName: "",
         email: "",
@@ -18,6 +20,9 @@ export default function BookingForm () {
             country: ""
         },
     });
+    const [successMessage, setSuccessMessage] = useState<BookingDetails | null>(null);
+    const [isModalOpen, setIsModalOpen] = useState(false);
+
     const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { name, value } = e.target;
     setFormData((prevData) => ({
@@ -32,15 +37,24 @@ export default function BookingForm () {
     e.preventDefault();
     setLoading(true);
     setError(null);
+    setSuccessMessage(null);
 
     try {
         const response = await axios.post("/api/bookings", formData);
+        const data = response.data;
         alert("Booking confirmed!");
+        setSuccessMessage(data);
+        setIsModalOpen(true);
     } catch (error) {
         setError("Failed to submit booking.");
+        console.error("Error:", error);
     } finally {
         setLoading(false);
     }
+    };
+
+    const closeModal = () => {
+    setIsModalOpen(false);
     };
 
     return (
@@ -126,12 +140,12 @@ export default function BookingForm () {
         <hr className="text-gray-200 mt-4"/>
         <div className="mt-4">
             <h2 className="text-[29px] font-bold">Ground rule</h2>
-            <p className="text-[24px] font-medium mt-4">We ask every guest to remember a few simple things about what makes a great guest.
+            <div className="text-[24px] font-medium mt-4">We ask every guest to remember a few simple things about what makes a great guest.
                 <ul>
                 <li>Follow the house rules</li>
                 <li>Treat your Host’s home like your own</li>
                 </ul>
-            </p>
+            </div>
         </div>
 
       {/* Submit Button */}
@@ -139,6 +153,27 @@ export default function BookingForm () {
         {loading ? "Processing..." : "Confirm & Pay"}
         </button>
         {error && <p className="text-red-500">{error}</p>}
+
+        {/* {isModalOpen && (
+        <Modal onClose={closeModal} isOpen={isModalOpen}>
+            {successMessage && (
+            <div>
+            <ul className="font-bold text-[12px] text-gray-700">
+                <li>FirstName: {successMessage.firstName}</li>
+                <li>LastName: {successMessage.lastName}</li>
+                <li>Email: {successMessage.email}</li>
+                <li>phone Number: {successMessage.phoneNumber}</li>
+                <li>card Number: {successMessage.cardNumber}</li>
+                <li>expiration Date: {successMessage.expirationDate}</li>
+                <li>cvv: {successMessage.cvv}</li>
+                <li>billing Address: {successMessage.billingAddress.country} - {successMessage.billingAddress.city} - {successMessage.billingAddress.state} - {successMessage.billingAddress.streetAddress} - {successMessage.billingAddress.zipCode} </li>
+            </ul>
+            </div>
+        )}
+            <button onClick={closeModal} className="bg-[#34967C] w-2 h-2 text-white font-bold">Close</button>
+        </Modal>
+        )} */}
+
     </form>
     </div>
     )

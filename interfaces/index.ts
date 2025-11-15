@@ -37,3 +37,22 @@ export interface Reviews {
     rating: number;
     comment: string;
 }
+
+export interface BillingAddress {
+    streetAddress: string;
+    city: string;
+    state: string;
+    zipCode: string;
+    country: string;
+};
+
+export interface BookingDetails {
+    firstName: string;
+    lastName: string;
+    email: string;
+    phoneNumber: string;
+    cardNumber: string;
+    expirationDate: string;
+    cvv: string;
+    billingAddress: BillingAddress;
+};
