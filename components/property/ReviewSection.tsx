@@ -2,15 +2,16 @@ import Image from "next/image";
 import { FaStar } from 'react-icons/fa';
 import axios from "axios";
 import { useState, useEffect } from "react";
+import { PropertyProps, Reviews } from "@/interfaces";
 
-const ReviewSection = ({ propertyId }) => {
-    const [reviews, setReviews] = useState([]);
+const ReviewSection = ({ id }: PropertyProps) => {
+    const [reviews, setReviews] = useState<Reviews[]>([]);
     const [loading, setLoading] = useState(true);
 
     useEffect(() => {
     const fetchReviews = async () => {
         try {
-        const response = await axios.get(`/api/properties/${propertyId}/reviews`);
+        const response = await axios.get(`/api/properties/${id}/reviews`);
         setReviews(response.data);
         } catch (error) {
         console.error("Error fetching reviews:", error);
@@ -20,7 +21,7 @@ const ReviewSection = ({ propertyId }) => {
     };
 
     fetchReviews();
-    }, [propertyId]);
+    }, [id]);
 
     if (loading) {
     return <p>Loading reviews...</p>;

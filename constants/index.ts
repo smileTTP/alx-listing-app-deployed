@@ -48,6 +48,7 @@ export const PROPERTYLISTINGSAMPLE: PropertyProps [] = [
     description: "Feel like exploring the Dominican? Start the day with a hike on one of Playa Moron’s many trails. Weave your way around the gated community to find secluded sandy coves for swimming and paddleboarding. When you’Feel like exploring the Dominican? Start the day with a hike on one of Playa Moron’s many trails. Weave your way around the gated community to find secluded sandy coves for swimming and paddleboarding. When you’re ready to chill with friends, the beach house pool awaits. Spend the night entertaining in the outdoor lounge, sipping drinks in the hot tub, and gazing out over incredible ocean views. ",
     reviews: [
       {
+        id: 2456,
         name: "Kerry",
         avatar: "/assets/avatars/kerry.jpg",
         date: new Date("2024-03-12T00:00:00Z"),
@@ -55,6 +56,7 @@ export const PROPERTYLISTINGSAMPLE: PropertyProps [] = [
         comment: "I simply don’t have the words to describe how incredibly beautiful the villa and its surroundings are. This is a wonderful remote spot that is simply breathtaking",
     },
     {
+        id: 1275,
         name: "Pooja",
         avatar: "/assets/avatars/pooja.jpg",
         date: new Date("2024-03-21T00:00:00Z"),
@@ -62,6 +64,7 @@ export const PROPERTYLISTINGSAMPLE: PropertyProps [] = [
         comment: "We stayed at this home for a family vacation of 7 adults (including 3 couples, 1 baby) and had a fantastic stay. The house was BEAUTIFUL and honestly better than shown in pictures, ",
     },
     {
+        id: 2095,
         name: "Cindy & Ben",
         avatar: "/assets/avatars/cindy.jpg",
         date: new Date("2023-08-10T00:00:00Z"),
@@ -69,6 +72,7 @@ export const PROPERTYLISTINGSAMPLE: PropertyProps [] = [
         comment: "I simply don’t have the words to describe how incredibly beautiful the villa and its surroundings are. This is a wonderful remote spot that is simply breathtaking",
     },
     {
+        id: 1398,
         name: "Marnie",
         avatar: "/assets/avatars/marnie.jpg",
         date: new Date("2023-01-03T00:00:00Z"),
@@ -99,6 +103,7 @@ export const PROPERTYLISTINGSAMPLE: PropertyProps [] = [
     description: "",
     reviews: [
       {
+        id: 2343,
         name: "",
         avatar: "",
         date: new Date("2025-10-31T00:00:00Z"),
@@ -129,6 +134,7 @@ export const PROPERTYLISTINGSAMPLE: PropertyProps [] = [
     description: "",
     reviews: [
       {
+        id: 2213,
         name: "",
         avatar: "",
         date: new Date("2025-10-31T00:00:00Z"),
@@ -159,6 +165,7 @@ export const PROPERTYLISTINGSAMPLE: PropertyProps [] = [
     description: "",
     reviews: [
       {
+        id: 1290,
         name: "",
         avatar: "",
         date: new Date("2025-10-31T00:00:00Z"),
@@ -189,6 +196,7 @@ export const PROPERTYLISTINGSAMPLE: PropertyProps [] = [
     description: "",
     reviews: [
       {
+        id: 3744,
         name: "",
         avatar: "",
         date: new Date("2025-10-31T00:00:00Z"),
@@ -219,6 +227,7 @@ export const PROPERTYLISTINGSAMPLE: PropertyProps [] = [
     description: "",
     reviews: [
       {
+        id: 2233,
         name: "",
         avatar: "",
         date: new Date("2025-10-31T00:00:00Z"),

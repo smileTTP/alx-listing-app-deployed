@@ -30,6 +30,7 @@ export interface PropertyProps {
 }
 
 export interface Reviews {
+        id: number;
         name: string;
         avatar: string;
         date: Date;
