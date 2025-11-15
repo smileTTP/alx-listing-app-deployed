@@ -7,7 +7,7 @@ export interface CategoryProps {
     onClick?: () => void;
 }
 export interface PropertyProps {
-    id: number;
+    id: number,
     name: string;
     address: {
         state: string;
@@ -30,10 +30,10 @@ export interface PropertyProps {
 }
 
 export interface Reviews {
-        id: number;
-        name: string;
-        avatar: string;
-        date: Date;
-        rating: number;
-        comment: string;
+    id: number;
+    name: string;
+    avatar: string;
+    date: Date;
+    rating: number;
+    comment: string;
 }

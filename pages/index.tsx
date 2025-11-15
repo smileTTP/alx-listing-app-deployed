@@ -13,7 +13,7 @@ export default function Home() {
   useEffect(() => {
     const fetchProperties = async () => {
       try {
-        const response = await axios.get(`${process.env.NEXT_PUBLIC_API_BASE_URL}/properties`);
+        const response = await axios.get('/api/properties');
         setProperties(response.data);
       } catch (error) {
         console.error("Error fetching properties:", error);
@@ -49,11 +49,13 @@ export default function Home() {
             </p>
         </div>
         </div>
-        <div className="grid lg:grid-cols-3 sm:grid-cols-1 md:grid-cols-2">
+        <div className="mt-8 flex justify-center">
+        <div className="grid lg:grid-cols-3 sm:grid-cols-1 md:grid-cols-2 gap-4">
           {
             properties.map((property) => (
               <PropertyCard key={property.id} property={property} />
           ))}
+        </div>
         </div>
         <div className="flex justify-center py-20 text-[20px] text-medium">
           <div className="flex flex-col items-center">

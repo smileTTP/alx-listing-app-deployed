@@ -6,7 +6,7 @@ import { PropertyProps } from "@/interfaces";
 const Card: React.FC<{ property: PropertyProps }> = ({ property }) => {
     return (
         <div className="w-[378.5572204589844px] h-[422.6997985839844px]">
-        <Link href={`/property/${property.name}`}>
+        <Link href={`/property/${property.id}`}>
             <Image src={property.image} alt={property.name} width={380} height={255} className={"rounded-2xl"}/>
             <div className="p-2 flex gap-2 mt-2 text-[12.16px]">
                 {
